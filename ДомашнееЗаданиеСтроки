@@ -1,0 +1,142 @@
+1. Создать пустую строку и вывести на экран
+
+string a = "    ";
+Console.WriteLine(a);
+
+2. Создать строку с несколькими символами и вывести на экран
+
+string a = "Hello!";
+Console.WriteLine(a);
+
+3. Создать строку, которая содержит только числа и вывести на экран
+
+ string a = "123"; 
+Console.WriteLine(a)
+
+4. Создать строку, которая содержит только символы и вывести на экран
+
+ string a = " /..@../"; 
+Console.WriteLine(a);
+
+5. Получить первый символ строки и вывести на экран
+
+string a = "/?.,@]";
+char b = a[0];
+Console.WriteLine(b);
+
+6. Получить второй символ строки и вывести на экран
+
+string a = "/?.,@]";
+char b = a[1];
+Console.WriteLine(b)
+
+7. Проверить, что строка содержит 2 символа и вывести на экран второй 
+
+string a = "Hello";
+bool b = "Hello".Length == 2;
+char c = a[1];
+Console.WriteLine(b);
+Console.WriteLine(a);
+
+8. Получить последний символ строки и вывести на экран
+
+string a = "Hello";
+char b = a[4];
+Console.WriteLine(b);
+
+9. Перебрать циклом строку 
+
+string a = "Hello";
+ 
+ for (var b=0; b<a.Length; b++)
+ {
+     Console.WriteLine(a[b]);
+ }
+ 
+10. Перебрать циклом строку и между каждым символом вставить запятую
+
+string a = "Hello";
+foreach (var c in a)
+{
+    Console.Write(c +",");
+}
+
+11. Перебрать циклом строку и каждый символ вывести с новой строки 
+
+string a = "Hello";
+
+foreach (var c in a)
+{
+    Console.WriteLine(c);
+}
+
+или 
+
+string a = "Hello";
+
+for (var b=0; b<a.Length; b++)
+{
+    Console.WriteLine(a[b]);
+}
+
+12. Сравнить две строки  (оператор ==)
+
+string a = "Hello";
+string b = "Hello";
+
+Console.WriteLine(a==b);
+
+13. Сравнить строки без учета регистра (привет, ПРИВЕТ и ПрИвЕТ)
+
+string a = "Hello";
+string b = "HELLO";
+string c = "hello";
+
+Console.WriteLine(a==b);
+Console.WriteLine(b==c);
+Console.WriteLine(a==c);
+
+14. Объединить несколько строк (метод string.Join)
+
+string a = "Hello";
+string b = "World";
+string c = "People";
+string[] d = new string[] { a, b, c };
+string f = string.Join(' ', d);
+Console.WriteLine(f)
+
+15. Разделить несколько строк по символу ',' (метод string.Split)
+
+string a = "Hello Danil Orekhov";
+string[] b = a.Split(new char[]{ ' ' });
+foreach (string c in b)
+{
+    Console.WriteLine(c);
+}
+
+16. Заменить часть строки на новое значение (метод string.Replace)
+
+string a = "Good day";
+a = a.Replace("Good", "Bad");
+Console.WriteLine(a);
+
+17. Получить подстроку от введенной строки с клавиатуры (метод string.Substring)
+
+string a = "Good day";
+a = a.Substring(5);
+Console.WriteLine(a);
+
+18. Перевести строку в нижний регистр (метод string.ToLower)
+19. Перевести строку в верхний регистр (метод string.ToUpper)
+
+string a = "GOOD day";
+Console.WriteLine(a.ToLower());
+Console.WriteLine(a.ToUpper());
+
+20. Удалить символы с краев строки (метод string.Trim. например "0000Hello0000".Trim('0'), результат "Hello")
+
+string a = "  GOOD day  ";
+a = a.Trim();
+Console.WriteLine(a);
+a = a.Trim(new char[] {'G', 'y'});
+Console.WriteLine(a);
